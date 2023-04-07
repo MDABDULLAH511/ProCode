@@ -1,0 +1,863 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+p {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #111111;
+}
+
+
+p,
+a {
+    color: #242424;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+/* All ---------- Button Css ---------- */
+.all_btn {
+    /* color: #fff; */
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #fc476a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    position: relative;
+    z-index: 99;
+    transition: .5s all ease-in-out;
+}
+
+.all_btn::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    border: none;
+    background-color: #112a68;
+    transition: .5s all ease-in-out;
+    z-index: -1;
+}
+
+.all_btn:hover::before {
+    width: 100%;
+}
+
+
+/* =============== Header Ttop =============== */
+.header_top {
+    padding: 0px 8px 5px;
+    border-top: 5px solid #112a68;
+    position: relative;
+    z-index: 9999;
+}
+
+
+.header_top::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(21% 0%, 100% 0%, 100% 100%, 23% 100%);
+    background-color: #112a68;
+    z-index: -1;
+}
+
+.header_top_right ul {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header_top_right ul li {
+    margin-left: 5px;
+}
+
+.header_top_right ul li a {
+    color: #ffff;
+    font-size: 15px;
+}
+
+.header_top_right ul li a i {
+    margin-right: 3px;
+    font-size: 14px;
+    transition: .5s all ease-in-out;
+}
+
+.header_top_right ul li:hover i {
+    color: #fc476a;
+}
+
+.email {
+    border-right: 3px solid #fff;
+    /* border-left: 3px solid #fff; */
+    padding: 0px 15px;
+}
+
+
+
+/* ---------- Multi language menu CSS Start Here ---------- */
+.lang-menu {
+    width: 100px;
+    position: relative;
+}
+
+.selected-lang {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.name_flag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name_flag img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+.lang-menu ul {
+    margin: 0;
+    padding: 5px;
+    display: none;
+    background-color: #112a68;
+    position: absolute;
+    top: 22px;
+    right: 0px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.lang-menu ul li {
+    margin: 0;
+    border-radius: 5px;
+}
+
+.lang-menu ul li a {
+    width: 125px;
+    padding: 5px 10px;
+}
+
+.lang-menu ul li:hover {
+    background-color: #00000050;
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
+
+/* =============== Main Headrt Part Start Here =============== */
+.header {
+    transition: all 0.5s;
+    padding: 10px 0;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0px 2px 1px -2px gray;
+}
+
+.sticky-top {
+    top: -1px;
+}
+
+.navbar-expand-lg .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 220px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #112a68;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0px 2px;
+    margin: 0px 10px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 0%;
+    background-color: #fc476a;
+    transition: .5s all ease-in-out;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #fc476a;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+
+.message_btn {
+    margin-left: 20px;
+}
+
+.header_btn{
+margin-left: 10px;
+}
+
+
+/* =============== Hero Part Start Here =============== */
+.hero {
+    min-height: 80vh;
+    background-image: url(../images/hero\ right\ bg.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.hero_row {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* hero_content  */
+.hero_content h6 {
+    color: #fc476a;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.hero_content h1 {
+    color: #112a68;
+    margin-top: 30px;
+    font-size: 38px;
+    text-transform: capitalize;
+}
+
+.hero_content h5 {
+    color: #112a68;
+    font-size: 18px;
+    margin: 25px 0 40px;
+}
+
+.hero_content span {
+    color: #fc476a;
+}
+
+/* =============== All Section Part Csc =============== */
+.all_section {
+    padding: 60px 0;
+}
+
+.all_section_header h6 {
+    color: #fc476a;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 60px;
+}
+
+.all_section_header h6::before {
+    content: " ";
+    position: absolute;
+    left: 18px;
+    top: 6px;
+    height: 2px;
+    width: 36px;
+    background-color: #fc476a;
+}
+
+.all_section_header h6::after {
+    content: " ";
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    height: 2px;
+    width: 36px;
+    background-color: #fc476a;
+}
+
+.all_section_header h2 {
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 15px 0 30px 0;
+}
+
+
+/* =============== About Part Css Start Here =============== */
+
+
+/* =============== Service Part css Start Here =============== */
+
+
+.service_item {
+    text-align: left;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgb(146 146 146 / 14%);
+    transition: .5s all ease-in-out;
+}
+
+.service_image_box {
+    height: 90px;
+    width: 90px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.service_item p {
+    margin: 12px 0 20px;
+}
+
+.service_item h5 a {
+    transition: .5s all ease-in-out;
+}
+
+.service_item_btn_div {
+    display: flex;
+}
+
+.service_item_btn_div span {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background: #112a68;
+    line-height: 32px;
+    color: #fff;
+    margin-right: 10px;
+    transition: .5s all ease-in-out;
+}
+
+.service_item_btn_div span i {
+    transition: .5s all ease-in-out;
+    margin-left: 0;
+}
+
+.service_item_btn {
+    color: #fc476a;
+    background-color: transparent;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.service_item_btn::before {
+    background-color: transparent;
+}
+
+/* Hover  */
+.service_item:hover {
+    box-shadow: 0px 0px 20px 10px rgb(146 146 146 / 14%);
+}
+
+.service_item:hover h5 a {
+    color: #fc476a;
+}
+
+.service_item:hover .service_item_btn_div span {
+    background: #fc476a;
+}
+
+.service_item:hover .service_item_btn_div span i {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =============== Testimonials Part Start Here =============== */
+.testimonials_part {
+    background-image: url(../images/testimonial\ \ bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 2;
+}
+
+.testimonials_part::before {
+    position: absolute;
+    content: '';
+    background-image: linear-gradient(75deg, rgba(19, 81, 168, 0.85) 10%, rgba(22, 46, 102, 0.85));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.testimonials_header {
+    text-align: center;
+}
+
+.testimonials_header h6 {
+    padding: 0;
+    color: #fff;
+}
+
+.testimonials_header h6::after {
+    left: 38%;
+    background-color: #fff;
+}
+
+.testimonials_header h6::before {
+    left: 37%;
+    background-color: #fff;
+}
+
+.testimonials_header h2 {
+    color: #fff;
+}
+
+/* testimonials_carousel item */
+
+.testimonials_item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 35px;
+    z-index: 99;
+}
+
+.testimonials_item::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/right-cr.png);
+    width: 89px;
+    height: 105px;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    opacity: .3;
+    z-index: -1;
+}
+
+.testimonials_item::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/cote.png);
+    width: 89px;
+    height: 60px;
+    background-size: contain;
+    bottom: 0;
+    right: 11px;
+    opacity: .4;
+    background-repeat: no-repeat;
+}
+
+.testimonials_profile_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile_img {
+    height: 70px;
+    width: 70px;
+    border: 2px solid #ddd;
+    margin-right: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 13.53px 1.47px rgb(85 80 98 / 12%);
+    border-radius: 100%;
+}
+
+.profile_info h5 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.profile_info h6 {
+    font-size: 14px;
+}
+
+.testimonials_item p {
+    font-size: 14px;
+}
+
+
+/*  testimonials_carousel   */
+
+.testimonials_carousel .owl-dots {
+    position: absolute;
+    bottom: -10px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonials_carousel .owl-dots .owl-dot span {
+    display: block;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    margin: 0 5px;
+    border-radius: 50px;
+}
+
+.testimonials_carousel .owl-dots .owl-dot.active span {
+    background: #fc476a;
+}
+
+/* ===============  Contact Part CSS Start Here =============== */
+
+.cntact_image img {
+    width: 80%;
+}
+
+
+
+/* ---------- form part css ---------- */
+
+
+
+input {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    color: #242424;
+    display: block;
+    float: none;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* label {
+    color: #242424;
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    float: none;
+    line-height: 1.3;
+    margin: 15px 0 4px 0;
+    padding: 0;
+
+} */
+
+
+textarea {
+    margin: 2px 0 20px 0;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}
+
+input[type="submit"] {
+    width: 50%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #fc476a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    transition: .5s all ease-in-out;
+}
+
+
+input[type="submit"]:hover {
+    color: #111111;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgb(75 81 91 / 37%);
+}
+
+
+
+/* ===============  Footer Part Start Here =============== */
+
+.footer_part {
+    background-color: #182c51;
+    position: relative;
+    padding: 50px 0 35px;
+    z-index: 99;
+}
+
+.footer_part::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/footer\ bg.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+
+.footer_conent {
+    margin-bottom: 15px;
+}
+
+.footer_conent h5 {
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+}
+
+.footer_conent h5::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 4px;
+    width: 50px;
+    background-color: #fc476a;
+}
+
+.footer_conent ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_conent ul li {
+    margin-bottom: 2px;
+    color: #fff;
+}
+
+.footer_conent ul li a {
+    color: #fff;
+    transition: .5s all ease-in-out;
+}
+
+.footer_conent ul li a i {
+    margin-right: 10px;
+    transition: .5s all ease-in-out;
+}
+
+.footer_conent ul li i {
+    margin-right: 10px;
+    color: #fff;
+    transition: .5s all ease-in-out;
+}
+
+/* Hover */
+.footer_conent ul li:hover a {
+    color: #fc476a;
+}
+
+
+
+
+/* ===============  copyright Part Start Here =============== */
+
+.copyright {
+    background-color: #0d1d3b;
+    padding: 10px 0;
+}
+
+.copyright p {
+    color: #efefef;
+    text-align: center;
+    font-size: 14px;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+/* ===============  Back to Top Part CSS Start Here ===============  */
+
+.progress-wrap {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    color: #fff;
+    background: #0d1d3b;
+}
+
+.progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress-wrap::after {
+    position: absolute;
+    font-family: 'Font Awesome 6 Free';
+    content: '\f102';
+    font: var(--fa-font-solid);
+    text-align: center;
+    line-height: 46px;
+    font-size: 24px;
+    color: #fff;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.progress-wrap:hover::after {
+    opacity: 0;
+}
+
+.progress-wrap::before {
+    position: absolute;
+    font-family: 'Font Awesome 6 Free';
+    content: '\f102';
+    font: var(--fa-font-solid);
+    text-align: center;
+    line-height: 46px;
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+    background-image: linear-gradient(298deg, var(--red), var(--yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fc476a;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+
+}
+
+.progress-wrap:hover::before {
+    opacity: 1;
+}
+
+.progress-wrap svg path {
+    fill: none;
+}
+
+.progress-wrap svg.progress-circle path {
+    stroke: #fc476a;
+    stroke-width: 5px;
+    box-sizing: border-box;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+body.light .progress-wrap {
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+body.light .progress-wrap::after {
+    color: var(--black-blue);
+}
+
+body.light .progress-wrap svg.progress-circle path {
+    stroke: var(--black-blue);
+}
+
+
+
+/* ++++++++++//////////++++++++++//////////++++++++++//////////++++++++++//////////
+Ouer Service Page Css
+//////////++++++++++//////////++++++++++//////////++++++++++//////////++++++++++ */
+
+/* ======== Service Hero========  */
+.service_hero_content p {
+    margin: 20px 0 35px;
+}
+.service_hero_content p span{
+
+}
+
+
+/* ======== Service Div ========  */
+.service_content_div {
+    display: flex;
+    align-items: center;
+}
+
+/* --------- Service Content ---------  */
+.service_content h1 {
+    color: #112a68;
+    font-size: 38px;
+    text-transform: capitalize;
+}
+.service_content h1 span
+ {
+    color: #fc476a;
+}
+
+.service_content p {
+    margin-top: 20px;
+}
+
+.service_content {
+    padding: 25px 20px;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.service_images img {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
